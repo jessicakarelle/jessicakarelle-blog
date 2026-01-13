@@ -1,23 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
     --black: #000000;
     --white: #ffffff;
-    --gray-dark: #1a1a1a;
-    --gray-medium: #333333;
-    --gray-light: #666666;
     --gray-lighter: #999999;
+    --gray-light: #666666;
 }
-
 body {
-    background-color: var(--black) !important;
+    font-family: "Inter", sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+a {
+    color: var(--gray-lighter);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+a:hover {
+    color: var(--white);
 }
 .bg-grid {
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-    background-size: 70px 50px;
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+nav.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
+}
+.navbar-brand {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.nav-link {
+    color: var(--gray-lighter);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+.nav-link:hover {
+    color: var(--white);
+}
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+.hero-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.hero-presentation-text {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--gray-lighter);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+.project-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+}
+.project-card:hover {
+    border-color: rgba(255,255,255,0.2);
+}
+.project-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.project-context {
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+.project-description {
+    color: var(--gray-lighter);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+.box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.box.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
