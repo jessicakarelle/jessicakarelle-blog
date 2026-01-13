@@ -6,7 +6,7 @@ const observer = new IntersectionObserver(
         entries.forEach((entry) => {
             if (entry.isIntersecting && entry.target.classList.contains("box")) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // une seule fois
+                observer.unobserve(entry.target); 
             }
         });
     },

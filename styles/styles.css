@@ -37,21 +37,22 @@ a:hover {
     background-size: 50px 50px;
     z-index: -1;
 }
-nav.navbar {
-    position: sticky;
+nav {
+    position: sticky !important;
     top: 0;
     width: 100%;
     padding: 1.5rem 2rem;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .navbar-brand {
     font-family: "Space Grotesk", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
     font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--white) !important;
 }
 .nav-link {
     color: var(--gray-lighter) !important;
@@ -96,30 +97,52 @@ nav.navbar {
     max-width: 600px;
     margin-bottom: 3rem;
 }
-.project-card {
+.articles-container {
+    position: relative;
+}
+.article-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    padding: 3rem;
     margin-bottom: 2rem;
     transition: all 0.3s;
+    position: sticky;
+    background-color: var(--black);
+    min-height: 400px;
 }
-.project-card:hover {
+.article-card {
+    will-change: transform, opacity;
+}
+
+.article-card:hover {
     border-color: rgba(255, 255, 255, 0.2);
 }
-.project-title {
+.article-1 {
+    top: 80px;
+}
+.article-2 {
+    top: 100px;
+}
+.article-3 {
+    top: 120px;
+}
+.article-4 {
+    top: 140px;
+}
+.article-title {
     font-family: "Space Grotesk", sans-serif;
     font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
-.project-context {
+.article-context {
     color: var(--gray-light);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
 }
-.project-description {
+.article-description {
     color: var(--gray-lighter);
     margin-bottom: 1rem;
     line-height: 1.7;
