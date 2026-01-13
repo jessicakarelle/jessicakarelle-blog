@@ -1,0 +1,42 @@
+@media (max-width: 992px) {
+    .all-articles-container .article-card {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .article-content {
+        font-size: 1rem;
+    }
+
+    .article-content .intro-paragraph {
+        font-size: 1.1rem;
+    }
+
+    .article-meta {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .article-nav {
+        flex-direction: column;
+    }
+
+    .nav-next {
+        text-align: left;
+    }
+
+    .highlight-box {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .all-articles-container .article-card {
+        flex: 0 1 100%;
+    }
+
+    .article-card {
+        padding: 2rem;
+    }
+}

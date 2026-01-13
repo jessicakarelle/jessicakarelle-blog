@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --black: #000000;
     --white: #ffffff;
@@ -38,7 +40,7 @@ a:hover {
     z-index: -1;
 }
 nav {
-    position: sticky !important;
+    position: sticky;
     top: 0;
     width: 100%;
     padding: 1.5rem 2rem;
@@ -79,6 +81,41 @@ nav {
 .nav-link:hover::before {
     width: calc(100% - 2rem);
 }
+.categories-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 3rem 0;
+}
+.category-btn {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--gray-lighter);
+    padding: 0.75rem 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.category-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+.category-btn.active {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+.article-date {
+    color: var(--gray-light);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
 .hero-section {
     min-height: 90vh;
     display: flex;
@@ -97,6 +134,12 @@ nav {
     max-width: 600px;
     margin-bottom: 3rem;
 }
+.section-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 4rem 0 3rem;
+}
 .articles-container {
     position: relative;
 }
@@ -105,15 +148,12 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 3rem;
     margin-bottom: 2rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     position: sticky;
     background-color: var(--black);
     min-height: 400px;
-}
-.article-card {
     will-change: transform, opacity;
 }
-
 .article-card:hover {
     border-color: rgba(255, 255, 255, 0.2);
 }
@@ -157,4 +197,176 @@ nav {
 .box.visible {
     opacity: 1;
     transform: translateY(0);
+}
+.btn-outline-secondary {
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+.btn-outline-secondary:hover {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+.all-articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.all-articles-container .article-card {
+    position: relative;
+    top: 0 !important;
+    min-height: auto;
+    flex: 0 1 calc(33.333% - 1.35rem);
+}
+.article-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-lighter);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+.back-link:hover {
+    color: var(--white);
+    transform: translateX(-5px);
+}
+.article-header {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 3rem;
+}
+.article-page-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--gray-lighter);
+}
+.article-content .intro-paragraph {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+.article-content h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+.article-content h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+.article-content ul,
+.article-content ol {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+.article-content li {
+    margin-bottom: 0.75rem;
+}
+.article-content strong {
+    color: var(--white);
+    font-weight: 600;
+}
+.article-content code {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+    font-size: 0.95em;
+    color: var(--white);
+}
+.article-content pre {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.article-content pre code {
+    background: none;
+    padding: 0;
+}
+.article-content blockquote {
+    border-left: 3px solid var(--white);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--gray-lighter);
+}
+.highlight-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+.highlight-box strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+.article-footer {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.article-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.nav-prev,
+.nav-next {
+    flex: 1;
+}
+.nav-next {
+    text-align: right;
+}
+.nav-label {
+    font-size: 0.85rem;
+    color: var(--gray-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+.nav-title {
+    color: var(--white);
+    font-size: 1.1rem;
+    display: block;
+}
+.nav-title:hover {
+    color: var(--gray-lighter);
 }

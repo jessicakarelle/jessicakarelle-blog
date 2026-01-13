@@ -3,18 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Mon premier projet C# : Survie en Terre Inconnue" />
-        <title>Mon premier projet C# | Jessica Karelle</title>
+        <meta name="description" content="Mon premier projet en programmation orientée objet avec C#" />
+        <title>Mon premier projet en POO | Jessica Karelle</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="../styles/styles.css" />
-        <link rel="stylesheet" href="../styles/responsives.css" />
         <link rel="icon" type="image/x-icon" href="../assets/icons-and-logos/logo.svg" />
     </head>
     <body>
         <div class="bg-grid"></div>
+
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a href="#home-section" class="navbar-brand text-uppercase">Jessica Karelle</a>
+                <a href="https://jessicakarelle.com/" class="navbar-brand text-uppercase">Jessica Karelle</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarList">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,37 +25,128 @@
                             <a href="https://portfolio.jessicakarelle.com/" class="nav-link">Portfolio</a>
                         </li>
                         <li class="nav-item"><a href="https://blog.jessicakarelle.com/" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                        <li class="nav-item">
+                            <a href="https://jessicakarelle.com/#contact" class="nav-link">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <article class="container my-5">
+
+        <article class="container article-wrapper">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <header class="mb-5">
-                        <a href="https://blog.jessicakarelle.com/" class="text-decoration-none d-inline-block mb-3">
-                            ← Retour au blog
-                        </a>
-                        <h1 class="article-title fw-bold mb-3"></h1>
-                        <p></p>
+                    <a href="https://blog.jessicakarelle.com/" class="back-link">← Retour au blog</a>
+
+                    <header class="article-header">
+                        <h1 class="article-page-title">Mon premier projet en programmation orientée objet</h1>
+                        <div class="article-meta">
+                            <span class="meta-date">13 janvier 2026</span>
+                            <span class="meta-category">Projet académique • C#</span>
+                            <span class="meta-reading">5 min de lecture</span>
+                        </div>
                     </header>
-                    <section class="article-content"></section>
-                    <footer class="mt-5 pt-4 border-top">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="small mb-1">Article précédent</p>
-                                <a href="#" class="text-decoration-none"> </a>
+
+                    <section class="article-content">
+                        <!-- INTRO: Accroche directe, 2-3 phrases max -->
+                        <p class="intro-paragraph">
+                            Créer mon premier jeu de survie en C# était mon projet final de session. Entre les concepts
+                            de POO qui semblaient abstraits et les erreurs de compilation qui s'accumulaient, le chemin
+                            n'a pas été simple. Voici ce que j'ai appris.
+                        </p>
+
+                        <!-- SECTION 1: Contexte du projet -->
+                        <h2>Le projet</h2>
+                        <p>
+                            L'objectif était de développer un jeu textuel de survie sur une île déserte. Le joueur doit
+                            gérer sa faim, sa soif, construire un abri et explorer son environnement.
+                        </p>
+                        <p>
+                            J'avais semaines pour le réaliser, en parallèle de mes autres cours. Au début, je pensais
+                            que ce serait facile. Spoiler: ça ne l'était pas.
+                        </p>
+                        <h2>Les défis rencontrés</h2>
+                        <h3>Comprendre la logique</h3>
+                        <p>Au départ,</p>
+                        <h3>Gérer les erreurs utilisateur</h3>
+                        <p>
+                            Mon jeu plantait dès que le joueur essayait de manger alors qu'il n'avait rien dans son
+                            inventaire.
+                        </p>
+                        <p>
+                            Leçon apprise: les utilisateurs ne suivent jamais le chemin que tu imagines. Il faut
+                            anticiper les erreurs et gérer les cas limites.
+                        </p>
+                        <h3>...Exception</h3>
+                        <p>Cette erreur m'a suivie pendant tout le projet.</p>
+                        <div class="highlight-box"><strong>Point important:</strong> lorem ipsum</div>
+                        <h2>Ce que j'ai appris</h2>
+                        <p>
+                            Au-delà des concepts techniques, ce projet m'a enseigné plusieurs choses importantes sur la
+                            façon d'aborder un projet de développement.
+                        </p>
+                        <ul>
+                            <li>Planifier avant de coder évite de perdre du temps à restructurer</li>
+                            <li>Commenter son code est essentiel pour s'y retrouver deux semaines plus tard</li>
+                            <li>Utiliser Git dès le début permet de ne pas perdre son travail</li>
+                            <li>Tester régulièrement vaut mieux qu'attendre d'avoir 300 lignes de code</li>
+                        </ul>
+                        <h2>Les petites victoires</h2>
+                        <p>
+                            Implémenter la sauvegarde de partie dans un fichier JSON a été un autre défi intéressant.
+                            Cela m'a permis de découvrir la sérialisation et la désérialisation de données.
+                        </p>
+
+                        <h3>Un exemple de code</h3>
+                        <p>Voici comment j'ai structuré ma classe de base Item:</p>
+                        <pre><code>public class Item
+{
+    public string Nom { get; set; }
+    public int Poids { get; set; }
+    
+    public virtual void Utiliser()
+    {
+        Console.WriteLine($"{Nom} a été utilisé.");
+    }
+}</code></pre>
+
+                        <!-- BLOCKQUOTE: Citation ou réflexion -->
+                        <blockquote>
+                            "Le meilleur code n'est pas celui qui est parfait, c'est celui qui fonctionne et que tu
+                            comprends."
+                        </blockquote>
+
+                        <!-- CONCLUSION -->
+                        <h2>Conclusion</h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <div class="highlight-box">
+                            <strong>Ressources:</strong> Le code source de ce projet est disponible sur mon GitHub.
+                            N'hésite pas à le consulter ou à me faire des suggestions d'amélioration.
+                        </div>
+                    </section>
+                    <footer class="article-footer">
+                        <div class="article-nav">
+                            <div class="nav-prev">
+                                <p class="nav-label">Article précédent</p>
+                                <a href="why-computer-science.html" class="nav-title"
+                                    >Pourquoi j'ai choisi les techniques de l'informatique</a
+                                >
                             </div>
-                            <div class="col-6 text-end">
-                                <p class="small mb-1">Article suivant</p>
-                                <a href="#" class="text-decoration-none"> </a>
+                            <div class="nav-next">
+                                <p class="nav-label">Article suivant</p>
+                                <a href="portfolio-construction.html" class="nav-title"
+                                    >Créer un portfolio professionnel en développement web</a
+                                >
                             </div>
                         </div>
                     </footer>
                 </div>
             </div>
         </article>
-        <script src="../js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
