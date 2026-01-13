@@ -3,20 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Pourquoi j'ai choisi l'informatique (et comment j'ai su que c'était la bonne voie)" />
-        <title>Pourquoi j'ai choisi l'informatique | Jessica Karelle</title>
+        <meta name="description" content="[DESCRIPTION DE L'ARTICLE]" />
+        <title>[TITRE ARTICLE] | Jessica Karelle</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="../styles/styles.css" />
-        <link rel="stylesheet" href="../styles/responsives.css" />
         <link rel="icon" type="image/x-icon" href="../assets/icons-and-logos/logo.svg" />
     </head>
     <body>
         <div class="bg-grid"></div>
+
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a href="#home-section" class="navbar-brand text-uppercase">Jessica Karelle</a>
+                <a href="https://jessicakarelle.com/" class="navbar-brand text-uppercase">Jessica Karelle</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarList">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,37 +25,114 @@
                             <a href="https://portfolio.jessicakarelle.com/" class="nav-link">Portfolio</a>
                         </li>
                         <li class="nav-item"><a href="https://blog.jessicakarelle.com/" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                        <li class="nav-item">
+                            <a href="https://jessicakarelle.com/#contact" class="nav-link">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <article class="container my-5">
+
+        <article class="container article-wrapper">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <header class="mb-5">
-                        <a href="https://blog.jessicakarelle.com/" class="text-decoration-none d-inline-block mb-3">
-                            ← Retour au blog
-                        </a>
-                        <h1 class="article-title fw-bold mb-3"></h1>
-                        <p></p>
+                    <a href="https://blog.jessicakarelle.com/" class="back-link">← Retour au blog</a>
+
+                    <header class="article-header">
+                        <h1 class="article-page-title">[TITRE DE L'ARTICLE]</h1>
+                        <div class="article-meta">
+                            <span class="meta-date">[DATE]</span>
+                            <span class="meta-category">[CATÉGORIE] • [TAGS]</span>
+                            <span class="meta-reading">[X] min de lecture</span>
+                        </div>
                     </header>
-                    <section class="article-content"></section>
-                    <footer class="mt-5 pt-4 border-top">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="small mb-1">Article précédent</p>
-                                <a href="#" class="text-decoration-none"> </a>
+
+                    <section class="article-content">
+                        <p class="intro-paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+
+                        <h2>Premier point principal</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris.
+                        </p>
+
+                        <h3>Sous-point A</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum.
+                        </p>
+
+                        <h3>Sous-point B</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat
+                            non proident.
+                        </p>
+
+                        <div class="highlight-box">
+                            <strong>Point important :</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore.
+                        </div>
+
+                        <h2>Deuxième point principal</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis
+                            nostrud exercitation.
+                        </p>
+
+                        <ul>
+                            <li>Premier élément de liste</li>
+                            <li>Deuxième élément de liste</li>
+                            <li>Troisième élément de liste</li>
+                            <li>Quatrième élément de liste</li>
+                        </ul>
+
+                        <h2>Troisième point principal</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+
+                        <blockquote>
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt."
+                        </blockquote>
+
+                        <h3>Exemple de code (si nécessaire)</h3>
+                        <pre><code>function exemple() {
+                            console.log("Lorem ipsum");
+                            return true;
+                        }</code></pre>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+
+                        <div class="highlight-box">
+                            <strong>Ressources :</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Liens, références ou code source disponibles.
+                        </div>
+                    </section>
+
+                    <footer class="article-footer">
+                        <div class="article-nav">
+                            <div class="nav-prev">
+                                <p class="nav-label">Article précédent</p>
+                                <a href="#" class="nav-title">[Titre article précédent]</a>
                             </div>
-                            <div class="col-6 text-end">
-                                <p class="small mb-1">Article suivant</p>
-                                <a href="#" class="text-decoration-none"> </a>
+                            <div class="nav-next">
+                                <p class="nav-label">Article suivant</p>
+                                <a href="#" class="nav-title">[Titre article suivant]</a>
                             </div>
                         </div>
                     </footer>
                 </div>
             </div>
         </article>
-        <script src="../js/scripts.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
