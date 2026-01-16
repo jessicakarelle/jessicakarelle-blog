@@ -7,7 +7,7 @@
             name="description"
             content="Retour sur le développement de mon jeu de survie en C# - défis, apprentissages et solutions techniques" />
         <title>Développement d'un jeu de survie en C# | Jessica Karelle</title>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="../styles/styles.css" />
         <link rel="icon" type="image/x-icon" href="../assets/icons-and-logos/logo.svg" />
@@ -67,7 +67,7 @@
 
                         <h2 class="box">Les fonctionnalités développées</h2>
 
-                       <h3 class="box">L'exploration de la carte</h3>
+                        <h3 class="box">L'exploration de la carte</h3>
                         <p class="box">
                             La carte est représentée par une grille 2D, où chaque case correspond à un type de terrain
                             et peut contenir une ressource spécifique, collectable selon un certain pourcentage de
@@ -77,14 +77,14 @@
                             position.
                         </p>
 
-                       <h3 class="box">Le système d'inventaire</h3>
+                        <h3 class="box">Le système d'inventaire</h3>
                         <p class="box">
                             L'inventaire stocke les ressources collectées (bois, pierre, nourriture) et permet au joueur
                             de voir ce qu'il possède. La gestion s'est faite avec des listes qui se mettent à jour
                             dynamiquement selon les actions du joueur.
                         </p>
 
-                       <h3 class="box">Le crafting</h3>
+                        <h3 class="box">Le crafting</h3>
                         <p class="box">
                             C'est la partie qui a demandé le plus de réflexion. Chaque recette nécessite des ressources
                             spécifiques et produit un nouvel objet. Par exemple, combiner du bois et de la pierre crée
@@ -92,7 +92,7 @@
                             de permettre la fabrication.
                         </p>
 
-                       <h3 class="box">La sauvegarde en JSON</h3>
+                        <h3 class="box">La sauvegarde en JSON</h3>
                         <p class="box">
                             Pour permettre de reprendre une partie, toutes les données importantes (position du joueur,
                             inventaire, état de la carte) sont sauvegardées dans un fichier JSON. La bibliothèque
@@ -102,7 +102,7 @@
 
                         <h2 class="box">Les défis rencontrés</h2>
 
-                       <h3 class="box">La gestion des erreurs</h3>
+                        <h3 class="box">La gestion des erreurs</h3>
                         <p class="box">
                             Il fallait anticiper toutes les situations où le joueur pourrait entrer quelque chose
                             d'invalide : une direction qui n'existe pas, essayer de crafter sans avoir les ressources,
@@ -110,7 +110,7 @@
                             clairs a beaucoup amélioré l'expérience.
                         </p>
 
-                       <h3 class="box">L'organisation du code</h3>
+                        <h3 class="box">L'organisation du code</h3>
                         <p class="box">
                             Au départ, tout était un peu mélangé dans quelques fichiers. Restructurer le code pour
                             séparer la logique du jeu, la gestion de l'affichage et la sauvegarde a rendu le projet
@@ -147,9 +147,7 @@
 
                         <div class="highlight-box">
                             <strong>Code source :</strong> Le projet complet est disponible sur
-                            <a
-                                href="https://github.com/jessicakarelle/survival-in-unknown-territory-console-game-project"
-                                target="_blank"
+                            <a href="https://github.com/jessicakarelle/survival-in-unknown-territory" target="_blank"
                                 >GitHub</a
                             >
                             pour ceux qui veulent voir l'implémentation en détail.
