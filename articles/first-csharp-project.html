@@ -34,7 +34,6 @@
                 </div>
             </div>
         </nav>
-
         <article class="container article-wrapper">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -51,29 +50,30 @@
 
                     <section class="article-content">
                         <p class="intro-paragraph">
-                            Pour le projet de fin de session dans mon cours de programmation, notre enseignant nous
-                            avait demandé de dévéloppé un jeu de survie en C# en équipe de deux. Le concept : explorer
-                            une carte 2D, collecter des ressources et survivre. Simple en apparence, mais le
-                            développement nous avait réservé quelques surprises intéressantes.
+                            Pour le projet de fin de session de mon cours de programmation, notre enseignant nous avait
+                            demandé de développer un jeu de survie en C# en équipe de deux. Le concept : explorer une
+                            carte 2D, collecter des ressources et survivre. Simple en apparence, le développement nous a
+                            néanmoins réservé quelques surprises intéressantes.
                         </p>
 
                         <h2>Le concept du jeu</h2>
                         <p>
-                            Le joueur se déplace sur une carte générée au départ et doit collecter différentes
-                            ressources pour survivre. Ces ressources peuvent ensuite être combinées pour créer des
-                            outils ou des objets utiles. L'objectif était de créer une boucle de jeu engageante tout en
-                            gardant une interface console claire.
+                            Le joueur se déplace sur une carte générée aléatoirement et doit collecter différentes
+                            ressources pour survivre. Celles-ci peuvent ensuite être combinées afin de créer des outils
+                            ou des objets utiles. L'objectif était de créer une boucle de jeu engageante tout en
+                            conservant une interface console claire.
                         </p>
 
                         <h2>Les fonctionnalités développées</h2>
 
                         <h3>L'exploration de la carte</h3>
                         <p>
-                            La carte est représentée par une liste 2D où chaque case contient un type de terrain
-                            contenant une ressource précise pouvont être collecté suivant un pourcentage de probabilité.
-                            Le système de déplacement vérifie que le joueur reste dans les limites et affiche la carte
-                            mise à jour après chaque mouvement. Gérer les coordonnées X et Y correctement a demandé
-                            quelques ajustements au début pour éviter les bugs de position.
+                            La carte est représentée par une grille 2D, où chaque case correspond à un type de terrain
+                            et peut contenir une ressource spécifique, collectable selon un certain pourcentage de
+                            probabilité. Le système de déplacement s'assure que le joueur reste dans les limites de la
+                            carte et affiche celle-ci mise à jour après chaque mouvement. La gestion correcte des
+                            coordonnées X et Y a nécessité quelques ajustements au début pour éviter les bugs de
+                            position.
                         </p>
 
                         <h3>Le système d'inventaire</h3>
@@ -131,16 +131,17 @@
                         </p>
 
                         <p>
-                            La gestion des listes 2D demande aussi de la rigueur. Une erreur dans les coordonnées et
-                            tout le système de déplacement devient imprévisible. Documenter son code et créer des
-                            fonctions claires aide énormément pour éviter ce genre de problèmes.
+                            La gestion des tableaux et listes 2D demande aussi de la rigueur. Une erreur dans les
+                            coordonnées et tout le système de déplacement devient imprévisible. Documenter son code et
+                            créer des fonctions claires aide énormément pour éviter ce genre de problèmes.
                         </p>
 
                         <h2>Améliorations futures</h2>
                         <p>
-                            Si je devais continuer ce projet, plusieurs ajouts seraient intéressants : un système de
-                            combat, des quêtes à accomplir, une génération procédurale de la carte, ou encore une
-                            interface graphique simple pour remplacer la console.
+                            Si je devais continuer ce projet, j’aimerais ajouter un système de combat pour affronter des
+                            ennemis, des quêtes pour explorer la carte et trouver des trésors, une génération
+                            procédurale pour rendre chaque partie unique, et peut-être même une petite interface
+                            graphique pour rendre l’expérience plus vivante que la console.
                         </p>
 
                         <div class="highlight-box">
