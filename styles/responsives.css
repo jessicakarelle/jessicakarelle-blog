@@ -24,7 +24,7 @@
         padding: 1.5rem;
     }
     .all-articles-container .article-card {
-        flex: 0 1 48%;
+        flex: 0 1 100%;
     }
 }
 @media (max-width: 576px) {

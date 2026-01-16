@@ -1,4 +1,3 @@
-// Sélectionne toutes les boxes à animer
 const boxes = document.querySelectorAll(".box");
 const observer = new IntersectionObserver(
     (entries) => {
