@@ -1,9 +1,3 @@
-@media (max-width: 992px) {
-    .all-articles-container .article-card {
-        flex: 0 1 100% !important;
-    }
-}
-
 @media (max-width: 768px) {
     .article-content {
         font-size: 1rem;
@@ -29,14 +23,20 @@
     .highlight-box {
         padding: 1.5rem;
     }
-}
-
-@media (max-width: 576px) {
     .all-articles-container .article-card {
-        flex: 0 1 100%;
+        flex: 0 1 48%; /* deux colonnes sur tablette */
+    }
+}
+@media (max-width: 576px) {
+    .article-card {
+        flex: 0 1 100% !important;
+        padding: 1.5rem;
+        min-height: auto;
+        position: relative !important;
+        top: 0 !important;
     }
 
-    .article-card {
-        padding: 2rem;
+    .all-articles-container .article-card {
+        flex: 0 1 100%;
     }
 }
