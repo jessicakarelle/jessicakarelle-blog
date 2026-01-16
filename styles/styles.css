@@ -218,7 +218,7 @@ nav {
     position: relative;
     top: 0 !important;
     min-height: auto;
-    flex: 1 1 calc(33.333% - 1.35rem);
+    flex: 0 1 calc(33.333% - 1.35rem);
 }
 .article-wrapper {
     padding-top: 2rem;
@@ -387,7 +387,6 @@ nav {
         background 0.3s,
         color 0.3s;
 }
-
 .scroll-to-top:hover {
     background: var(--white);
     color: var(--black);

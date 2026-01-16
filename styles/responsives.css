@@ -24,10 +24,13 @@
         padding: 1.5rem;
     }
     .all-articles-container .article-card {
-        flex: 0 1 48%; /* deux colonnes sur tablette */
+        flex: 0 1 48%;
     }
 }
 @media (max-width: 576px) {
+    .hero-section {
+        min-height: 60vh !important;
+    }
     .article-card {
         flex: 0 1 100% !important;
         padding: 1.5rem;
