@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Les erreurs les plus courantes en apprenant Git et comment les éviter ou les corriger" />
+        <title>Apprendre Git : erreurs courantes et solutions | Jessica Karelle</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <link rel="icon" type="image/x-icon" href="../assets/icons-and-logos/logo.svg" />
+    </head>
+    <body>
+        <div class="bg-grid"></div>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="https://jessicakarelle.com/" class="navbar-brand text-uppercase">Jessica Karelle</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarList">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarList">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="https://jessicakarelle.com/" class="nav-link">Accueil</a></li>
+                        <li class="nav-item">
+                            <a href="https://portfolio.jessicakarelle.com/" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item"><a href="https://blog.jessicakarelle.com/" class="nav-link">Blog</a></li>
+                        <li class="nav-item">
+                            <a href="https://jessicakarelle.com/#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <article class="container article-wrapper">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <a href="https://blog.jessicakarelle.com/" class="back-link">← Retour au blog</a>
+
+                    <header class="article-header box">
+                        <h1 class="article-page-title">Apprendre Git : erreurs courantes et solutions</h1>
+                        <div class="article-meta">
+                            <span class="meta-date">20 décembre 2025</span>
+                            <span class="meta-category">Développement • Git • Conseils</span>
+                            <span class="meta-reading">4 min de lecture</span>
+                        </div>
+                    </header>
+
+                    <section class="article-content">
+                        <p class="intro-paragraph">
+                            Git est un outil essentiel pour tout développeur, mais ses débuts peuvent être déroutants.
+                            Voici les erreurs que j'ai rencontrées en apprenant Git et comment les résoudre ou les
+                            éviter.
+                        </p>
+
+                        <h2 class="box">Oublier de faire des commits réguliers</h2>
+                        <p class="box">
+                            Une erreur classique est de travailler pendant des heures sans faire de commit. Résultat :
+                            un énorme commit qui mélange plusieurs fonctionnalités et rend difficile le suivi des
+                            changements.
+                        </p>
+
+                        <h3 class="box">La solution</h3>
+                        <p class="box">
+                            Prendre l'habitude de faire des commits plus fréquents, idéalement après chaque petite
+                            fonctionnalité ou correction. Un bon commit devrait représenter une seule modification
+                            logique du code.
+                        </p>
+
+                        <h2 class="box">Messages de commit peu clairs</h2>
+                        <p class="box">
+                            Des messages comme "fix", "update" ou "changements" ne disent rien sur ce qui a été modifié.
+                            Quand on revient sur le projet quelques semaines plus tard, impossible de savoir ce que ces
+                            commits contenaient.
+                        </p>
+
+                        <h3 class="box">Comment bien nommer ses commits</h3>
+                        <ul class="box">
+                            <li>Utiliser un verbe à l'impératif : "Ajouter", "Corriger", "Modifier"</li>
+                            <li>Être spécifique : "Corriger le bug d'affichage dans le menu" plutôt que "fix bug"</li>
+                            <li>Garder le message concis mais informatif</li>
+                            <li>Éviter les messages vagues comme "modifications" ou "update"</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <strong>Bonne pratique :</strong> Un message de commit devrait permettre de comprendre ce
+                            qui a changé sans avoir à lire le code.
+                        </div>
+
+                        <h2 class="box">Ne pas vérifier l'état avant de commit</h2>
+                        <p class="box">
+                            Faire un commit sans vérifier ce qui va être ajouté peut mener à inclure des fichiers
+                            indésirables ou oublier des changements importants.
+                        </p>
+
+                        <h3 class="box">Les commandes utiles</h3>
+                        <p class="box">
+                            Utiliser <code>git status</code> pour voir l'état actuel des fichiers et
+                            <code>git diff</code> pour voir exactement ce qui a changé avant de faire un commit. Ces
+                            commandes évitent bien des surprises.
+                        </p>
+
+                        <h2 class="box">Commit de fichiers sensibles</h2>
+                        <p class="box">
+                            Ajouter accidentellement des fichiers de configuration contenant des mots de passe, des clés
+                            API ou des informations personnelles au dépôt est une erreur sérieuse.
+                        </p>
+
+                        <h3 class="box">La prévention</h3>
+                        <p class="box">
+                            Utiliser un fichier .gitignore dès le début du projet pour exclure les fichiers sensibles,
+                            les dépendances (node_modules) et les fichiers générés automatiquement. Vérifier toujours ce
+                            qu'on s'apprête à commit avec <code>git status</code>.
+                        </p>
+
+                        <h2 class="box">Problèmes avec les branches</h2>
+                        <p class="box">
+                            Travailler directement sur la branche main/master ou oublier sur quelle branche on travaille
+                            peut créer de la confusion, surtout dans des projets d'équipe.
+                        </p>
+
+                        <h3 class="box">Utiliser les branches correctement</h3>
+                        <ul class="box">
+                            <li>
+                                Créer une nouvelle branche pour chaque fonctionnalité :
+                                <code>git checkout -b nom-fonctionnalite</code>
+                            </li>
+                            <li>Vérifier régulièrement la branche active avec <code>git branch</code></li>
+                            <li>Garder la branche main propre et stable</li>
+                            <li>Fusionner les branches seulement quand la fonctionnalité est terminée et testée</li>
+                        </ul>
+
+                        <h2 class="box">Conflits de fusion mal gérés</h2>
+                        <p class="box">
+                            Les conflits de fusion peuvent être stressants quand on débute. Certains développeurs
+                            paniquent et annulent tout, perdant parfois du travail.
+                        </p>
+
+                        <h3 class="box">Comment gérer les conflits</h3>
+                        <p class="box">
+                            Git marque clairement les zones en conflit dans les fichiers. Prendre le temps de comprendre
+                            ce que chaque version du code fait, décider quelle version garder (ou combiner les deux),
+                            puis marquer le conflit comme résolu. Tester le code après la résolution est crucial.
+                        </p>
+
+                        <div class="highlight-box">
+                            <strong>Conseil :</strong> En cas de doute sur un conflit, ne pas hésiter à demander de
+                            l'aide plutôt que de fusionner au hasard.
+                        </div>
+
+                        <h2 class="box">Oublier de pull avant de push</h2>
+                        <p class="box">
+                            Travailler sur une version locale obsolète et essayer de push sans avoir récupéré les
+                            derniers changements du dépôt distant cause des problèmes de synchronisation.
+                        </p>
+
+                        <h3 class="box">La bonne habitude</h3>
+                        <p class="box">
+                            Toujours faire un <code>git pull</code> avant de commencer à travailler pour s'assurer
+                            d'avoir la dernière version. Faire un autre pull avant de push pour intégrer les changements
+                            récents des autres contributeurs.
+                        </p>
+
+                        <h2 class="box">Peur d'utiliser les commandes</h2>
+                        <p class="box">
+                            Beaucoup de débutants n'osent pas utiliser certaines commandes Git par peur de tout casser.
+                            Cette hésitation ralentit l'apprentissage et limite l'utilisation de Git.
+                        </p>
+
+                        <h3 class="box">S'exercer sans risque</h3>
+                        <p class="box">
+                            Créer un dépôt de test pour expérimenter avec les commandes Git sans craindre de perdre du
+                            vrai travail. C'est en pratiquant qu'on devient à l'aise avec l'outil.
+                        </p>
+
+                        <h2 class="box">Ressources utiles</h2>
+                        <ul class="box">
+                            <li>La documentation officielle de Git : claire et complète</li>
+                            <li>GitHub Learning Lab : tutoriels interactifs</li>
+                            <li>Git Cheat Sheet : aide-mémoire des commandes principales</li>
+                            <li>Stack Overflow : pour trouver des solutions à des problèmes spécifiques</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <strong>Rappel important :</strong> Tout le monde fait des erreurs avec Git au début.
+                            L'important est d'apprendre de ces erreurs et de développer de bonnes habitudes
+                            progressivement.
+                        </div>
+                    </section>
+
+                    <footer class="article-footer">
+                        <div class="article-nav">
+                            <div class="nav-prev">
+                                <p class="nav-label">Article précédent</p>
+                                <a href="work-life-balance.html" class="nav-title"
+                                    >Concilier études et vie personnelle</a
+                                >
+                            </div>
+                            <div class="nav-next">
+                                <p class="nav-label">Article suivant</p>
+                                <a href="internship-preparation.html" class="nav-title"
+                                    >Préparer sa recherche de stage</a
+                                >
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </article>
+        <a href="#" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+        <script src="../js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
