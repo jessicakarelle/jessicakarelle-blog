@@ -57,18 +57,18 @@
                             néanmoins réservé quelques surprises intéressantes.
                         </p>
 
-                        <h2>Le concept du jeu</h2>
-                        <p>
+                        <h2 class="box">Le concept du jeu</h2>
+                        <p class="box">
                             Le joueur se déplace sur une carte générée aléatoirement et doit collecter différentes
                             ressources pour survivre. Celles-ci peuvent ensuite être combinées afin de créer des outils
                             ou des objets utiles. L'objectif était de créer une boucle de jeu engageante tout en
                             conservant une interface console claire.
                         </p>
 
-                        <h2>Les fonctionnalités développées</h2>
+                        <h2 class="box">Les fonctionnalités développées</h2>
 
-                        <h3>L'exploration de la carte</h3>
-                        <p>
+                       <h3 class="box">L'exploration de la carte</h3>
+                        <p class="box">
                             La carte est représentée par une grille 2D, où chaque case correspond à un type de terrain
                             et peut contenir une ressource spécifique, collectable selon un certain pourcentage de
                             probabilité. Le système de déplacement s'assure que le joueur reste dans les limites de la
@@ -77,41 +77,41 @@
                             position.
                         </p>
 
-                        <h3>Le système d'inventaire</h3>
-                        <p>
+                       <h3 class="box">Le système d'inventaire</h3>
+                        <p class="box">
                             L'inventaire stocke les ressources collectées (bois, pierre, nourriture) et permet au joueur
                             de voir ce qu'il possède. La gestion s'est faite avec des listes qui se mettent à jour
                             dynamiquement selon les actions du joueur.
                         </p>
 
-                        <h3>Le crafting</h3>
-                        <p>
+                       <h3 class="box">Le crafting</h3>
+                        <p class="box">
                             C'est la partie qui a demandé le plus de réflexion. Chaque recette nécessite des ressources
                             spécifiques et produit un nouvel objet. Par exemple, combiner du bois et de la pierre crée
                             une hache. Le défi était de vérifier que le joueur possède bien tous les ingrédients avant
                             de permettre la fabrication.
                         </p>
 
-                        <h3>La sauvegarde en JSON</h3>
-                        <p>
+                       <h3 class="box">La sauvegarde en JSON</h3>
+                        <p class="box">
                             Pour permettre de reprendre une partie, toutes les données importantes (position du joueur,
                             inventaire, état de la carte) sont sauvegardées dans un fichier JSON. La bibliothèque
                             Newtonsoft.Json a simplifié cette partie, même si gérer les cas où le fichier est manquant
                             ou corrompu a nécessité quelques vérifications supplémentaires.
                         </p>
 
-                        <h2>Les défis rencontrés</h2>
+                        <h2 class="box">Les défis rencontrés</h2>
 
-                        <h3>La gestion des erreurs</h3>
-                        <p>
+                       <h3 class="box">La gestion des erreurs</h3>
+                        <p class="box">
                             Il fallait anticiper toutes les situations où le joueur pourrait entrer quelque chose
                             d'invalide : une direction qui n'existe pas, essayer de crafter sans avoir les ressources,
                             tenter de se déplacer hors de la carte. L'ajout de validations et de messages d'erreur
                             clairs a beaucoup amélioré l'expérience.
                         </p>
 
-                        <h3>L'organisation du code</h3>
-                        <p>
+                       <h3 class="box">L'organisation du code</h3>
+                        <p class="box">
                             Au départ, tout était un peu mélangé dans quelques fichiers. Restructurer le code pour
                             séparer la logique du jeu, la gestion de l'affichage et la sauvegarde a rendu le projet
                             beaucoup plus maintenable. Une bonne organisation fait vraiment la différence quand on doit
@@ -123,22 +123,22 @@
                             de devoir tout réorganiser plus tard.
                         </div>
 
-                        <h2>Ce que ce projet m'a appris</h2>
-                        <p>
+                        <h2 class="box">Ce que ce projet m'a appris</h2>
+                        <p class="box">
                             Au-delà des compétences techniques en C#, ce projet m'a montré l'importance de tester
                             régulièrement et de ne pas sous-estimer le temps nécessaire pour déboguer. Certains bugs qui
                             semblaient simples ont pris plusieurs heures à résoudre, souvent à cause de petites erreurs
                             de logique.
                         </p>
 
-                        <p>
+                        <p class="box">
                             La gestion des tableaux et listes 2D demande aussi de la rigueur. Une erreur dans les
                             coordonnées et tout le système de déplacement devient imprévisible. Documenter son code et
                             créer des fonctions claires aide énormément pour éviter ce genre de problèmes.
                         </p>
 
-                        <h2>Améliorations futures</h2>
-                        <p>
+                        <h2 class="box">Améliorations futures</h2>
+                        <p class="box">
                             Si je devais continuer ce projet, j’aimerais ajouter un système de combat pour affronter des
                             ennemis, des quêtes pour explorer la carte et trouver des trésors, une génération
                             procédurale pour rendre chaque partie unique, et peut-être même une petite interface
